@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Beaches Travel Inc.</title>
+    <link rel="stylesheet" href="./stylesheets/profile-stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="./images/beaches-travel-inc-logo.svg" class="logo-img" alt="Beaches Travel Inc. logo">
+            </div>
+            <div class="nav-menu">
+                <ul class="left-group">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./pages/offers.html">Offers</a></li>
+                    <li><a href="./pages/my-vouchers.html">Vouchers</a></li>
+                </ul>
+                <ul class="right-group">
+                    <li>
+                        <a href="./pages/my-cart.html">
+                            <img src="./images/cart-icon.svg" class="cart-icon" alt="Cart Icon">
+                            <span>(<span id="cart-count">0</span>)</span>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="./pages/my-profile.html">
+                            <img src="./images/profile-icon.svg" class="profile-icon" alt="Profile Icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Profile Header -->
+        <section class="profile-header">
+
+            <img src="../images/profile.png"
+                 alt="Profile Picture"
+                 width="150"
+                 height="150">
+
+            <h2>Juan Dela Cruz</h2>
+            <p><strong>Member ID:</strong> BT-2026-001</p>
+
+        </section>
+
+        <!-- Account Information -->
+        <section class="account-info">
+
+            <h3>Account Information</h3>
+
+            <p><strong>Email:</strong> juandelacruz@gmail.com</p>
+            <p><strong>Phone Number:</strong> +63 912 345 6789</p>
+            <p><strong>Address:</strong> Quezon City, Philippines</p>
+
+            <a href="edit-profile.html">
+                <button>Edit Profile</button>
+            </a>
+
+        </section>
+
+        <!-- Travel Statistics -->
+        <section class="travel-stats">
+
+            <h3>Travel Statistics</h3>
+
+            <p><strong>Total Trips Booked:</strong> 4</p>
+            <p><strong>Reward Points:</strong> 1250</p>
+            <p><strong>Favorite Destination:</strong> Nacpan Beach, El Nido</p>
+
+        </section>
+
+        <!-- Upcoming Trip -->
+        <section class="upcoming-trip">
+
+            <h3>Upcoming Trip</h3>
+
+            <p><strong>Destination:</strong> Long Beach, San Vicente</p>
+            <p><strong>Date:</strong> July 25, 2026</p>
+            <p><strong>Package:</strong> 3 Days / 2 Nights</p>
+
+        </section>
+
+        <!-- Recent Bookings -->
+        <section class="recent-bookings">
+
+            <h3>Recent Bookings</h3>
+
+            <div class="booking-card">
+                <h4>Duli Beach, El Nido</h4>
+                <p>Date: March 12, 2026</p>
+                <p>Package: 2 Days / 1 Night</p>
+            </div>
+
+            <hr>
+
+            <div class="booking-card">
+                <h4>White Beach, Port Barton</h4>
+                <p>Date: January 8, 2026</p>
+                <p>Package: Full Day Tour</p>
+            </div>
+
+            <hr>
+
+            <div class="booking-card">
+                <h4>Onoc Island, Balabac</h4>
+                <p>Date: November 20, 2025</p>
+                <p>Package: 3 Days / 2 Nights</p>
+            </div>
+
+        </section>
+
+        <!-- Logout -->
+        <section class="logout-section">
+            <button>Logout</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Beaches Travel Inc.</p>
+        <p>Your gateway to Palawan's finest beaches.</p>
+    </footer>
+
+</body>
+</html>

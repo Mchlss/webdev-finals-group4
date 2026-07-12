@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Beaches Travel Inc.</title>
+    <link rel="stylesheet" href="./stylesheets/my-cart-stylesheet.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="./images/beaches-travel-inc-logo.svg" class="logo-img" alt="Beaches Travel Inc. logo">
+            </div>
+            <div class="nav-menu">
+                <ul class="left-group">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./pages/offers.html">Offers</a></li>
+                    <li><a href="./pages/my-vouchers.html">Vouchers</a></li>
+                </ul>
+                <ul class="right-group">
+                    <li><a href="./pages/my-cart.html">Cart (1)</a></li>
+                    <li><a href="./pages/my-profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h2>Your Shopping Cart</h2>
+
+            <div class="cart-container">
+                
+                <div class="cart-items-list">
+                    
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <h3>Tropical Excursion Package</h3>
+                            <p class="item-description">Full-day island hopping tour with complimentary lunch.</p>
+                        </div>
+                        <div class="item-pricing">
+                            <span class="item-price">$150.00</span>
+                            <div class="quantity-control">
+                                <button type="button" class="qty-btn">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button type="button" class="qty-btn">+</button>
+                            </div>
+                            <button type="button" class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside class="cart-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$150.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Promo Code (REFRESH50)</span>
+                        <span class="discount-text">-$75.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Estimated Taxes</span>
+                        <span>$12.00</span>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="summary-row total-row">
+                        <strong>Total</strong>
+                        <strong>$87.00</strong>
+                    </div>
+
+                    <form action="checkout-success.html" method="POST">
+                        <button type="submit" class="checkout-btn">Proceed to Checkout 🌴</button>
+                    </form>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

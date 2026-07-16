@@ -13,7 +13,7 @@ body{
     padding-right: 2%;
     box-sizing: border-box;
 
-    background-color: #FAF6F2;
+    background-color: #3a2a80;
     border-bottom: 1px solid #EAE1D8; /* Subtle separator */
 }
 
@@ -47,4 +47,13 @@ body{
     display: flex;       
     gap: 40px;        
     align-items: center; 
+}
+
+.nav-menu .left-group a {
+    color: #EAE1D8;
+    text-decoration: none;
+}
+
+.nav-menu .right-group span {
+    color: #EAE1D8;
 }

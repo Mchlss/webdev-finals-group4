@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beaches Travel Inc.| Home</title>
+    <title>Home | Beaches Travel Inc.</title>
     <link rel="stylesheet" href="stylesheets/header-stylesheet.css">
     <link rel="stylesheet" href="stylesheets/index-stylesheet.css">
-    <script src="scripts/global.js"></script>
+    <script src="scripts/global-script.js" defer></script>
+    <script src="scripts/index-script.js" defer></script>
+
 </head>
 <body>
 
     <header id="header-placeholder"></header>
 
+    <section class="showcase-section">
+            <h2 class="showcase-title">Explore Our Paradise Islands</h2>
+            
+            <div class="showcase-container">
+                <!-- Navigation Arrows -->
+                <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+                <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
+                <!-- Slide 1: Onok Island (using your local image) -->
+                <div class="slide active">
+                    <img src="../images/islands-images/onok.jpg" alt="Onok Island">
+                    <div class="slide-caption">
+                        <h3>Onok Island</h3>
+                        <p>A crystal clear marine sanctuary waiting to be discovered.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Nacpan Beach -->
+                <div class="slide">
+                    <img src="../images/islands-images/nacpan.jpg" alt="Nacpan Beach">
+                    <div class="slide-caption">
+                        <h3>Nacpan Beach</h3>
+                        <p>Enjoy golden sands stretching as far as the eye can see.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3: White Beach -->
+                <div class="slide">
+                    <img src="../images/islands-images/whitebeach.jpg" alt="White Beach">
+                    <div class="slide-caption">
+                        <h3>White Beach</h3>
+                        <p>The perfect spot to experience breathtaking Palawan sunsets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dots Indicators -->
+            <div class="dots-container">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
     <main>
         <section class="main-message">
             
@@ -73,6 +119,10 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+    </footer>
 
 </body>
 </html>

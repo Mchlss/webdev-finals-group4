@@ -1,6 +1,58 @@
+:root {
+    --brand-purple: #432a76;
+    --brand-accent-pink: #e03b7a;
+    --brand-accent-orange: #f06449;
+    --navy-blue: #1d425c;
+    --sand-bg: #fbf6ed;
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body{
-     background: linear-gradient(
-        to bottom,
-        #F5EFE6
-    );
+    background: var(--sand-bg);
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px; /* Fixes the cramped right-side spacing issue */
+    width: 100%;
+}
+
+.custom-wave-footer {
+    --footer-purple: var(--brand-purple);
+    --footer-accent-pink: var(--brand-accent-pink);
+    
+    width: 100%;
+    min-height: 250px; 
+    
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,45.1C194.7,10.4,337,7.1,600,42.3C863,77.6,999,111.8,1200,16.4V0H0V45.1z' fill='%23e03b7a'%3E%3C/path%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,55.1C194.7,20.4,337,17.1,600,52.3C863,87.6,999,121.8,1200,26.4V10H0V55.1z' fill='%23432a76'%3E%3C/path%3E%3C/svg%3E");
+    
+    background-size: 100% 15px, 100% 100%; 
+    background-position: top center, top center;
+    background-repeat: no-repeat, no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    background-color: var(--brand-purple);
+}
+
+.footer-content {
+    color: var(--white);
+    font-family: sans-serif; /* Update to your brand font */
+    font-size: 0.9rem;
+    text-align: center;
 }

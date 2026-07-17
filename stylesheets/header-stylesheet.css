@@ -4,13 +4,6 @@
     padding: 0;
 }
 
-html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 /* Navigation Menu Container*/
 .nav-container {
     position: relative;
@@ -21,7 +14,6 @@ html, body {
     padding: 15px;
     box-sizing: border-box;
     background-color: #3a2a80;
-    border-bottom: 1px solid #EAE1D8;
     z-index: 1000;
 }
 
@@ -58,6 +50,11 @@ html, body {
     align-items: center;
 }
 
+.left-group .nav-divider strong {
+    color: #EAE1D8;
+    opacity: 0.6;
+}
+
 .nav-container a {
     color: #EAE1D8;
     text-decoration: none;
@@ -71,10 +68,34 @@ html, body {
 }
 
 .cart-icon { 
-    width: 26px; height: auto; display: block; 
+    width: 40px; height: auto; display: block; 
 }
+
+#cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand-accent-pink);
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-left: 4px;
+    padding: 2px;
+}
+
+.nav-link-with-icon span {
+    display: flex;
+    align-items: center;
+}
+
 .profile-icon { 
-    width: 22px; height: auto; display: block; 
+    width: 40px;
+    height: auto; 
+    display: block;
+    border-radius  : 100%;
 }
 
 .hamburger-menu {
@@ -97,6 +118,10 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    .left-group .nav-divider {
+        display: none !important;
+    }
+
     .logo-img { 
         width: 130px; 
     }
@@ -104,10 +129,6 @@ html, body {
     .hamburger-menu { 
         display: flex; 
         margin-left: 10px;
-    }
-
-    .nav-utilities {
-        gap: 12px;
     }
     
     .right-group {

@@ -10,80 +10,92 @@
     
     <script src="scripts/global-script.js" defer></script>
     <script src="scripts/index-script.js" defer></script>
-
 </head>
 <body>
+    <!-- Promotion Popup -->
+    <dialog id="promoPopup" class="promo-popup">
+        <!-- Close button -->
+        <button id="closePopup" class="close-btn">&times;</button>
+        
+        <!-- Link to offers -->
+        <a href="pages/my-vouchers.html" class="popup-link">
+            <img src="images/vouchers-images/new-user-voucher.jpg" alt="Huge Promo Banner" class="huge-promo-image">
+        </a>
+    </dialog>
 
     <header id="header-placeholder"></header>
 
+    <!-- Carousel / Showcase Section -->
     <section class="showcase-section">
-            <h2 class="showcase-title">Explore Our Paradise Islands</h2>
-            
-            <div class="showcase-container">
-                <!-- Navigation Arrows -->
-                <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-                <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+        <h2 class="showcase-title">Explore Our Paradise Islands</h2>
+        
+        <div class="showcase-container">
+            <!-- Navigation Arrows -->
+            <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+            <button class="nav-btn next-btn" id="nextBtn" aria-label="Next Slide">&#10095;</button>
 
-                <!-- Slide 1: Onok Island (using your local image) -->
-                <div class="slide active">
-                    <img src="../images/islands-images/onok.jpg" alt="Onok Island">
-                    <div class="slide-caption">
-                        <h3>Onok Island</h3>
-                        <p>A crystal clear marine sanctuary waiting to be discovered.</p>
-                    </div>
-                </div>
-
-                <!-- Slide 2: Nacpan Beach -->
-                <div class="slide">
-                    <img src="../images/islands-images/nacpan.jpg" alt="Nacpan Beach">
-                    <div class="slide-caption">
-                        <h3>Nacpan Beach</h3>
-                        <p>Enjoy golden sands stretching as far as the eye can see.</p>
-                    </div>
-                </div>
-
-                <!-- Slide 3: White Beach -->
-                <div class="slide">
-                    <img src="../images/islands-images/whitebeach.jpg" alt="White Beach">
-                    <div class="slide-caption">
-                        <h3>White Beach</h3>
-                        <p>The perfect spot to experience breathtaking Palawan sunsets.</p>
-                    </div>
+            <!-- Slide 1: Onok Island -->
+            <div class="slide active">
+                <img src="../images/islands-images/onok.jpg" alt="Onok Island">
+                <div class="slide-caption">
+                    <h3>Onok Island</h3>
+                    <p>A crystal clear marine sanctuary waiting to be discovered.</p>
                 </div>
             </div>
 
-            <!-- Dots Indicators -->
-            <div class="dots-container">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
+            <!-- Slide 2: Nacpan Beach -->
+            <div class="slide">
+                <img src="../images/islands-images/nacpan.jpg" alt="Nacpan Beach">
+                <div class="slide-caption">
+                    <h3>Nacpan Beach</h3>
+                    <p>Enjoy golden sands stretching as far as the eye can see.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3: White Beach -->
+            <div class="slide">
+                <img src="../images/islands-images/whitebeach.jpg" alt="White Beach">
+                <div class="slide-caption">
+                    <h3>White Beach</h3>
+                    <p>The perfect spot to experience breathtaking Palawan sunsets.</p>
+                </div>
             </div>
         </div>
+
+        <!-- Dots Indicators -->
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
     </section>
+
+    <!-- Main Content Area -->
     <main>
         <section class="main-message">
-            
             <h1>Say Aloha to Savings</h1>
-            <p><strong>Current Promotion:</strong> Book today and get 15% 
-                off your first tropical excursion!</p>
+            <p><strong>Current Promotion:</strong> Book today and get 15% off your first tropical excursion!</p>
             <a href="#promos" class="cta-btn">Claim Your Discount 🍍</a>
         </section>
 
         <p class="hint-text" id="promos">Click a card below to reveal your surprise promo code! 👇</p>
 
+        <!-- Interactive Flip Promo Cards -->
         <section class="features">
             <div class="feature-wrapper">
                 <input type="checkbox" id="promo1" class="promo-checkbox">
                 <label for="promo1" class="feature-card">
-                    <div class="card-front">
-                        <div class="feature-icon">🍹</div>
-                        <h3>Refreshingly Good</h3>
-                        <p>Up to 50% off on all summer essentials. Stay cool.</p>
-                    </div>
-                    <div class="card-back">
-                        <div class="feature-icon">🎉</div>
-                        <h3>Your Code:</h3>
-                        <p class="secret-code">REFRESH50</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="feature-icon">🍹</div>
+                            <h3>Refreshingly Good</h3>
+                            <p>Up to 50% off on all summer essentials. Stay cool.</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="feature-icon">🎉</div>
+                            <h3>Your Code:</h3>
+                            <p class="secret-code">REFRESH50</p>
+                        </div>
                     </div>
                 </label>
             </div>
@@ -91,15 +103,17 @@
             <div class="feature-wrapper">
                 <input type="checkbox" id="promo2" class="promo-checkbox">
                 <label for="promo2" class="feature-card">
-                    <div class="card-front">
-                        <div class="feature-icon">🏄‍♀️</div>
-                        <h3>Ride the Wave</h3>
-                        <p>New arrivals dropping week. Catch the trends.</p>
-                    </div>
-                    <div class="card-back">
-                        <div class="feature-icon">🌊</div>
-                        <h3>Your Code:</h3>
-                        <p class="secret-code">SURF20</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="feature-icon">🏄‍♀️</div>
+                            <h3>Ride the Wave</h3>
+                            <p>New arrivals dropping weekly. Catch the trends.</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="feature-icon">🌊</div>
+                            <h3>Your Code:</h3>
+                            <p class="secret-code">SURF20</p>
+                        </div>
                     </div>
                 </label>
             </div>
@@ -107,23 +121,27 @@
             <div class="feature-wrapper">
                 <input type="checkbox" id="promo3" class="promo-checkbox">
                 <label for="promo3" class="feature-card">
-                    <div class="card-front">
-                        <div class="feature-icon">🌺</div>
-                        <h3>Premium Quality</h3>
-                        <p>Crafted with care to bring sunshine to your life.</p>
-                    </div>
-                    <div class="card-back">
-                        <div class="feature-icon">☀️</div>
-                        <h3>Your Code:</h3>
-                        <p class="secret-code">SUNSHINE</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="feature-icon">🌺</div>
+                            <h3>Premium Quality</h3>
+                            <p>Crafted with care to bring sunshine to your life.</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="feature-icon">☀️</div>
+                            <h3>Your Code:</h3>
+                            <p class="secret-code">SUNSHINE</p>
+                        </div>
                     </div>
                 </label>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+    <footer class="custom-wave-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+        </div>
     </footer>
 
 </body>

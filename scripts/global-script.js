@@ -57,3 +57,33 @@ function initHamburgerMenu() {
         console.error("Hamburger elements could not be found inside fetched header.html markup template.");
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateHeaderCartCount();
+});
+
+
+window.updateHeaderCartCount = function() {
+    const countSpan = document.getElementById('cart-count');
+    if (!countSpan) return;
+
+    // Get the current array from storage
+    const currentCart = JSON.parse(localStorage.getItem('userShoppingArr')) || [];
+    
+    // Calculate total quantity
+    const totalItems = currentCart.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
+    
+    // Update badge text
+    countSpan.textContent = totalItems;
+};
+
+// Listen for storage changes in other tabs/windows
+window.addEventListener('storage', () => {
+    window.updateHeaderCartCount();
+});
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait briefly for the header to render if it's dynamic
+    setTimeout(window.updateHeaderCartCount, 100);
+});

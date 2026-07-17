@@ -8,79 +8,138 @@
     <link rel="stylesheet" href="../stylesheets/global-stylesheet.css">
     <link rel="stylesheet" href="../stylesheets/offers-stylesheet.css">
 
-    <script src="../scripts/global-script.js"></script>
+    <script src="../scripts/global-script.js" defer></script>
+    <script src="../scripts/offers-script.js" defer></script>
 </head>
 <body>
 
     <header id="header-placeholder"></header>
 
-    <section class="hero">
-        <h2>Discover Our Travel Offers</h2>
-        <p>Choose your next paradise destination.</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h2>Discover Our Travel Offers</h2>
+            <p>Choose your next paradise destination.</p>
+        </section>
 
-    <section class="offers">
+        <section class="offers">
+            <!-- Card 1 -->
+            <div class="card" data-id="duli-beach" data-title="Duli Beach Getaway" data-price="5500.00" data-desc="Surf, relax, and enjoy a peaceful beach getaway.">
+                <img src="../images/islands-images/duli.jpg" alt="Duli Beach">
+                <div class="card-content">
+                    <h3>Duli Beach</h3>
+                    <p>Surf, relax, and enjoy a peaceful beach getaway.</p>
+                    <span class="card-price">₱5,500.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/duli.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/duli.jpg" alt="Duli Beach">
-        <h3>Duli Beach</h3>
-        <p>Surf, relax, and enjoy a peaceful beach getaway.</p>
-        <a href="./packages/duli.html">View Package</a>
-    </div>
+            <!-- Card 2 -->
+            <div class="card" data-id="nacpan-beach" data-title="Nacpan Beach Package" data-price="7500.00" data-desc="Experience four kilometers of white sand.">
+                <img src="../images/islands-images/nacpan.jpg" alt="Nacpan Beach">
+                <div class="card-content">
+                    <h3>Nacpan Beach</h3>
+                    <p>Experience four kilometers of white sand.</p>
+                    <span class="card-price">₱7,500.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/nacpan.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/nacpan.jpg" alt="Nacpan Beach">
-        <h3>Nacpan Beach</h3>
-        <p>Experience four kilometers of white sand.</p>
-        <a href="./packages/nacpan.html">View Package</a>
-    </div>
+            <!-- Card 3 -->
+            <div class="card" data-id="lio-beach" data-title="Lio Luxury Retreat" data-price="12000.00" data-desc="Luxury beachfront with dining and activities.">
+                <img src="../images/islands-images/lio.jpg" alt="Lio Beach">
+                <div class="card-content">
+                    <h3>Lio Beach</h3>
+                    <p>Luxury beachfront with dining and activities.</p>
+                    <span class="card-price">₱12,000.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/lio.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/lio.jpg" alt="Lio Beach">
-        <h3>Lio Beach</h3>
-        <p>Luxury beachfront with dining and activities.</p>
-        <a href="./packages/lio.html">View Package</a>
-    </div>
+            <!-- Card 4 -->
+            <div class="card" data-id="entalula-beach" data-title="Entalula Paradise Tour" data-price="8500.00" data-desc="Hidden paradise surrounded by limestone cliffs.">
+                <img src="../images/islands-images/entalula.jpg" alt="Entalula Beach">
+                <div class="card-content">
+                    <h3>Entalula Beach</h3>
+                    <p>Hidden paradise surrounded by limestone cliffs.</p>
+                    <span class="card-price">₱8,500.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/entalula.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/entalula.jpg" alt="Entalula Beach">
-        <h3>Entalula Beach</h3>
-        <p>Hidden paradise surrounded by limestone cliffs.</p>
-        <a href="./packages/entalula.html">View Package</a>
-    </div>
+            <!-- Card 5 -->
+            <div class="card" data-id="white-beach" data-title="Port Barton White Beach" data-price="4800.00" data-desc="Relax in the calm waters of Port Barton.">
+                <img src="../images/islands-images/whitebeach.jpg" alt="White Beach">
+                <div class="card-content">
+                    <h3>White Beach</h3>
+                    <p>Relax in the calm waters of Port Barton.</p>
+                    <span class="card-price">₱4,800.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/whitebeach.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/whitebeach.jpeg" alt="White Beach">
-        <h3>White Beach</h3>
-        <p>Relax in the calm waters of Port Barton.</p>
-        <a href="./packages/whitebeach.html">View Package</a>
-    </div>
+            <!-- Card 6 -->
+            <div class="card" data-id="long-beach" data-title="San Vicente Long Beach" data-price="6200.00" data-desc="The longest white-sand beach in the Philippines.">
+                <img src="../images/islands-images/longbeach.jpg" alt="Long Beach">
+                <div class="card-content">
+                    <h3>Long Beach</h3>
+                    <p>The longest white-sand beach in the Philippines.</p>
+                    <span class="card-price">₱6,200.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/longbeach.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/longbeach.jpg" alt="Long Beach">
-        <h3>Long Beach</h3>
-        <p>The longest white-sand beach in the Philippines.</p>
-        <a href="./packages/longbeach.html">View Package</a>
-    </div>
+            <!-- Card 7 -->
+            <div class="card" data-id="nagtabon-beach" data-title="Nagtabon Surfing Package" data-price="5000.00" data-desc="Hidden surfing paradise near Puerto Princesa.">
+                <img src="../images/islands-images/nagtabon.jpg" alt="Nagtabon Beach">
+                <div class="card-content">
+                    <h3>Nagtabon Beach</h3>
+                    <p>Hidden surfing paradise near Puerto Princesa.</p>
+                    <span class="card-price">₱5,000.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/nagtabon.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <img src="../images/islands-images/nagtabon.jpg" alt="Nagtabon Beach">
-        <h3>Nagtabon Beach</h3>
-        <p>Hidden surfing paradise near Puerto Princesa.</p>
-        <a href="./packages/nagtabon.html">View Package</a>
-    </div>
+            <!-- Card 8 -->
+            <div class="card" data-id="onok-island" data-title="Onok Island Expedition" data-price="15000.00" data-desc="Crystal-clear waters and unforgettable island tours.">
+                <img src="../images/islands-images/onok.jpg" alt="Onok Island">
+                <div class="card-content">
+                    <h3>Onok Island</h3>
+                    <p>Crystal-clear waters and unforgettable island tours.</p>
+                    <span class="card-price">₱15,000.00</span>
+                    <div class="card-actions">
+                        <a href="./packages/onok.html" class="view-btn">View Package</a>
+                        <button type="button" class="add-to-cart-btn">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="card">
-        <img src="../images/islands-images/onoc.jpg" alt="Onoc Island">
-        <h3>Onoc Island</h3>
-        <p>Crystal-clear waters and unforgettable island tours.</p>
-        <a href="./packages/onoc.html">View Package</a>
-    </div>
-
-    </section>
-
-    <footer>
-        <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+    <footer class="custom-wave-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+        </div>
     </footer>
 
 </body>

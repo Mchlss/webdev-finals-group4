@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-section {
+    padding: 20px 0;
+}
+
+.cart-section h2 {
+    color: var(--text-dark);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* Two-column layout grid */
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 30px;
+    align-items: start;
+    width: 100%;
+}
+
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Cart Item Cards */
+.cart-item {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(67, 42, 118, 0.05);
+    border: 1px solid rgba(67, 42, 118, 0.05);
+}
+
+.item-details h3 {
+    color: var(--brand-purple);
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+}
+
+.item-description {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.item-pricing {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-purple);
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Micro-interactions for Quantity Inputs */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(67, 42, 118, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.qty-btn {
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--brand-purple);
+    transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: rgba(67, 42, 118, 0.05);
+}
+
+.qty-input {
+    width: 45px;
+    height: 36px;
+    border: none;
+    border-left: 1px solid rgba(67, 42, 118, 0.1);
+    border-right: 1px solid rgba(67, 42, 118, 0.1);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: #c0392b;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Sidebar Order Breakdown Container */
+.cart-summary {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(67, 42, 118, 0.05);
+    border: 1px solid rgba(67, 42, 118, 0.05);
+}
+
+.cart-summary h3 {
+    margin: 0 0 20px 0;
+    color: var(--brand-purple);
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--sand-bg);
+    padding-bottom: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.discount-text {
+    color: var(--brand-accent-orange);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Voucher Selector Module Elements
+   ========================================================================== */
+.voucher-use-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(67, 42, 118, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.voucher-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--brand-purple);
+}
+
+.voucher-dropdown {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(67, 42, 118, 0.25);
+    color: var(--brand-purple);
+    background-color: var(--white);
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.voucher-dropdown:focus {
+    border-color: var(--brand-accent-pink);
+}
+
+.voucher-actions {
+    margin-top: 4px;
+    text-align: right;
+}
+
+.redeem-more-btn {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--brand-purple);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.redeem-more-btn:hover {
+    color: var(--brand-accent-pink);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Structural Mechanics and Action Buttons
+   ========================================================================== */
+hr {
+    border: 0;
+    border-top: 1px solid rgba(67, 42, 118, 0.1);
+    margin: 20px 0;
+}
+
+.total-row {
+    font-size: 1.3rem;
+    color: var(--brand-purple);
+    margin-bottom: 24px;
+}
+
+.summary-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: var(--brand-accent-pink);
+    color: var(--white);
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(224, 59, 122, 0.3);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: var(--brand-purple);
+    transform: translateY(-2px);
+}
+
+.continue-browsing-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--brand-purple);
+    border: 2px solid var(--brand-purple);
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.continue-browsing-btn:hover {
+    background-color: var(--brand-purple);
+    color: var(--white);
+}
+
+/* Empty State Styling Elements */
+.empty-cart-message {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(67, 42, 118, 0.05);
+}
+
+.empty-cart-message p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.shop-btn {
+    display: inline-block;
+    background-color: var(--brand-accent-pink);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .item-pricing {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .item-price {
+        text-align: left;
+        min-width: auto;
+    }
+}

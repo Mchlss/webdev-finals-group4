@@ -4,76 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Vouchers | Beaches Travel Inc.</title>
+
     <link rel="stylesheet" href="../stylesheets/header-stylesheet.css">
     <link rel="stylesheet" href="../stylesheets/global-stylesheet.css">
     <link rel="stylesheet" href="../stylesheets/my-vouchers-stylesheet.css">
 
     <script src="../scripts/global-script.js"></script>
+    <script src="../scripts/my-vouchers-script.js"></script>
 </head>
 
 <body>
+
     <header id="header-placeholder"></header>
 
     <main>
+
         <section class="page-title-section">
             <h1>My Beach Vouchers</h1>
-            <p>Keep track of your upcoming tropical getaways, day passes, and excursion tickets.</p>
+            <p>
+                Keep track of your upcoming tropical getaways,
+                day passes, and excursion tickets.
+            </p>
         </section>
 
+        <!-- ACTIVE VOUCHERS -->
         <section class="voucher-section active-vouchers">
+
             <h2>🎟️ Active & Upcoming Vouchers</h2>
-            
+
             <div class="voucher-grid">
+
                 <article class="voucher-card status-valid">
-                    <div class="voucher-badge">Valid</div> <!-- Badge for valid vouchers -->
-                    <div class="voucher-details">
-                        <h3>50% OFF PALAWAN TRIP</h3>
-                        <p class="voucher-code"><strong>Voucher Code:</strong> <span class="code">PALAWAN-TRIP-9982</span></p>
-                        <p class="expiry"><strong>Expires on:</strong> December 31, 2026</p>
+
+                    <div class="voucher-image">
+                        <img src="../images/vouchers-images/new-user-voucher.jpg" alt="New User Voucher">
                     </div>
-                    <div class="voucher-actions">
-                        <button class="btn btn-primary">View QR Code</button>
-                        <button class="btn btn-secondary">Download PDF</button>
+
+                    <div class="voucher-content">
+                        <div class="voucher-header">
+                            <div class="voucher-discount">
+                                50% OFF
+                            </div>
+
+                            <div class="voucher-code-box">
+                                WELCOME-2026
+                            </div>
+                        </div>
+
+                        <h3>New User Experience</h3>
+
+                        <hr class="voucher-divider">
+
+                        <div class="voucher-description">
+                            <p>• Valid for selected packages only</p>
+                            <p>• One voucher per customer</p>
+                            <p>• Cannot be combined with other promotions</p>
+                        </div>
+
+                        <div class="voucher-footer">
+                            <span class="expiry">
+                                Expires: December 8, 2026
+                            </span>
+
+                            <button class="redeem-btn">
+                                Redeem
+                            </button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="voucher-card status-valid">
-                    <div class="voucher-badge">Valid</div>
-                    <div class="voucher-details">
-                        <h3>35% OFF BEACH TRIP</h3>
-                        <p class="voucher-code"><strong>Voucher Code:</strong> <span class="code">BEACH-TRIP-4410</span></p>
-                        <p class="expiry"><strong>Expires on:</strong> October 15, 2026</p>
+
+                    <div class="voucher-image">
+                        <img src="../images/vouchers-images/beach-trip-voucher.jpg" alt="Beach Trip Voucher">
                     </div>
-                    <div class="voucher-actions">
-                        <button class="btn btn-primary">View QR Code</button>
-                        <button class="btn btn-secondary">Download PDF</button>
+
+                    <div class="voucher-content">
+
+                        <div class="voucher-header">
+                            <div class="voucher-discount">
+                                35% OFF
+                            </div>
+
+                            <div class="voucher-code-box">
+                                BEACH-TRIP-4410
+                            </div>
+                        </div>
+
+                        <h3>Beach Trip Voucher</h3>
+
+                        <hr class="voucher-divider">
+
+                        <div class="voucher-description">
+                            <p>• Valid for selected beach packages only</p>
+                            <p>• One voucher per customer</p>
+                            <p>• Cannot be combined with other promotions</p>
+                        </div>
+
+                        <div class="voucher-footer">
+                            <span class="expiry">
+                                Expires: October 15, 2026
+                            </span>
+
+                            <button class="redeem-btn">
+                                Redeem
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="voucher-card status-valid">
+
+                    <div class="voucher-image">
+                        <img src="../images/vouchers-images/palawan-trip-voucher.jpg" alt="Palawan Trip Voucher">
+                    </div>
+
+                    <div class="voucher-content">
+
+                        <div class="voucher-header">
+                            <div class="voucher-discount">
+                                30% OFF
+                            </div>
+
+                            <div class="voucher-code-box">
+                                PALAWAN-TRIP-9982
+                            </div>
+                        </div>
+
+                        <h3>Palawan Trip Voucher</h3>
+
+                        <hr class="voucher-divider">
+
+                        <div class="voucher-description">
+                            <p>• Valid for selected Palawan destinations only</p>
+                            <p>• One voucher per customer</p>
+                            <p>• Cannot be combined with other promotions</p>
+                        </div>
+
+                        <div class="voucher-footer">
+                            <span class="expiry">
+                                Expires: December 31, 2026
+                            </span>
+
+                            <button class="redeem-btn">
+                                Redeem
+                            </button>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <hr> <section class="voucher-section past-vouchers">
+        <hr>
+
+        <section class="voucher-section past-vouchers">
+
             <h2>⏳ Past & Redeemed Vouchers</h2>
-            
-            <div class="voucher-grid layout-dimmed">
+
+            <div class="voucher-grid">
+
                 <article class="voucher-card status-redeemed">
-                    <div class="voucher-badge badge-used">Redeemed</div>
-                    <div class="voucher-details">
-                        <h3>75% OFF GIFT VOUCHER</h3>
-                        <p class="voucher-code"><strong>Voucher Code:</strong> <span class="code">GIFT-VOUCHER-1102</span></p>
-                        <p class="expiry">Used on: May 14, 2026</p>
+
+                    <div class="voucher-image">
+                        <img src="../images/vouchers-images/gift-voucher.jpg" alt="Gift Voucher">
                     </div>
-                    <div class="voucher-actions">
-                        <button class="btn btn-disabled" disabled>Receipt</button>
+
+                    <div class="voucher-content">
+
+                        <div class="voucher-header">
+                            <div class="voucher-discount">
+                                75% OFF
+                            </div>
+
+                            <div class="voucher-code-box">
+                                GIFT-VOUCHER-1102
+                            </div>
+                        </div>
+
+                        <h3>Gift Voucher</h3>
+
+                        <hr class="voucher-divider">
+
+                        <div class="voucher-description">
+                            <p>• Voucher successfully redeemed</p>
+                            <p>• Used for promotional travel package</p>
+                            <p>• Cannot be used again</p>
+                        </div>
+
+                        <div class="voucher-footer">
+                            <span class="expiry">
+                                Redeemed: May 14, 2026
+                            </span>
+                            <button class="redeem-btn" disabled>
+                                Redeemed
+                            </button>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 Beaches Travel Inc.</p>
-        <p>Your gateway to Palawan's finest beaches.</p>
+    <footer class="custom-wave-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+        </div>
     </footer>
 
 </body>

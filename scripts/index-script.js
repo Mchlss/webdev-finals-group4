@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('promoPopup');
+    const closeBtn = document.getElementById('closePopup');
+
+    // 1. Show popup
+    setTimeout(() => {
+        popup.showModal();
+    }, 1500);
+
+    // 2. Close when clicking the 'X' button
+    closeBtn.addEventListener('click', () => {
+        popup.close();
+    });
+
+    // 3. Close when clicking the backdrop (outside the banner)
+    popup.addEventListener('click', (e) => {
+        // If the user clicks the dialog element itself (the backdrop area)
+        // and NOT the link or the image, close it.
+        if (e.target === popup) {
+            popup.close();
+        }
+    });
+});
+
 const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const prevBtn = document.getElementById('prevBtn');

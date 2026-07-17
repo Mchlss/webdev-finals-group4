@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const placeholder = document.getElementById('header-placeholder');
             if (!placeholder) return;
             
+            //Inject the HTML structure onto the page
             placeholder.innerHTML = data;
 
             document.querySelector('.header-logo').src = `${basePath}images/icons/beaches-travel-inc-logo.svg`;
@@ -26,6 +27,33 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('nav-cart').href = `${basePath}pages/my-cart.html`;
             document.getElementById('nav-profile').href = `${basePath}pages/my-profile.html`;
             document.getElementById('nav-about-us').href = `${basePath}pages/about-us.html`;
+
+            initHamburgerMenu();
         })
         .catch(error => console.error('Error rendering system global navigation:', error));
 });
+
+function initHamburgerMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            navMenu.classList.toggle('open');
+            menuToggle.classList.toggle('active');
+        });
+
+        const links = navMenu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                menuToggle.classList.remove('active');
+            });
+        });
+        
+        console.log("Hamburger Navigation system successfully linked!");
+    } else {
+        console.error("Hamburger elements could not be found inside fetched header.html markup template.");
+    }
+}

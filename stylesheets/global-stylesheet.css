@@ -28,31 +28,76 @@ main {
     width: 100%;
 }
 
-.custom-wave-footer {
-    --footer-purple: var(--brand-purple);
-    --footer-accent-pink: var(--brand-accent-pink);
-    
-    width: 100%;
-    min-height: 250px; 
-    
-    background-image: 
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,45.1C194.7,10.4,337,7.1,600,42.3C863,77.6,999,111.8,1200,16.4V0H0V45.1z' fill='%23e03b7a'%3E%3C/path%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,55.1C194.7,20.4,337,17.1,600,52.3C863,87.6,999,121.8,1200,26.4V10H0V55.1z' fill='%23432a76'%3E%3C/path%3E%3C/svg%3E");
-    
-    background-size: 100% 15px, 100% 100%; 
-    background-position: top center, top center;
-    background-repeat: no-repeat, no-repeat;
-    
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 40px;
+.footer {
     background-color: var(--brand-purple);
+    color: var(--white);
+    padding: 40px 20px 0px;
+    margin-top: 50px;
 }
 
 .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 40px
+}
+
+.footer-section {
+    flex: 0 1 auto;
+    min-width: 200px;
+}
+
+.footer-logo {
+    max-width: 350px;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
     color: var(--white);
-    font-family: sans-serif; /* Update to your brand font */
-    font-size: 0.9rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
     text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    /* Negative margins pull the element to the edges, canceling out the parent's 20px padding */
+    margin-left: -20px;
+    margin-right: -20px;
+    
+    background-color: var(--brand-accent-pink);
+    color: var(--white);
+    font-size: 0.85rem;
 }

@@ -24,7 +24,7 @@
             
             <!-- Left Side: Items -->
             <div class="cart-items-list" id="cartItemsList">
-                <!-- JavaScript will render the items here -->
+                <!-- Js will fill this -->
             </div>
 
             <!-- Right Side: Sidebar -->
@@ -64,9 +64,7 @@
                 </div>
 
                 <div class="summary-actions">
-                    <form action="checkout-success.html" method="POST">
-                        <button type="submit" class="checkout-btn">Proceed to Checkout 🌴</button>
-                    </form>
+                    <button id="checkoutButton" class="checkout-btn">Proceed to Checkout 🌴</button>
                     <a href="offers.html" class="continue-browsing-btn">Continue Browsing</a>
                 </div>
             </aside>
@@ -80,11 +78,41 @@
     </section>
     </main>
 
-    <footer class="custom-wave-footer">
+    <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+            <!-- Logo and Tagline -->
+            <div class="footer-section">
+                <img src="../images/icons/beaches-travel-inc-logo.svg" alt="Beaches Travel Logo" class="footer-logo">
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/offers.html">Offers</a></li>
+                    <li><a href="../pages/my-vouchers.html">Vouchers</a></li>
+                    <li><a href="../pages/about-us.html">About us</a></li>
+                </ul>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="../images/icons/facebook-icon.svg" alt="Facebook"></a>
+                    <a href="https://x.com"><img src="../images/icons/x-icon.svg" alt="X"></a>
+                    <a href="https://www.instagram.com"><img src="../images/icons/instagram-icon.svg" alt="Instagram"></a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved.</p>
         </div>
     </footer>
+
 
 </body>
 </html>

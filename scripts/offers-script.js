@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: targetCard.getAttribute('data-title'),
             price: parseFloat(targetCard.getAttribute('data-price')),
             description: targetCard.getAttribute('data-desc'),
+            image: targetCard.querySelector('img').src, 
             quantity: 1
         };
 

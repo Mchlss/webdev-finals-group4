@@ -1,0 +1,701 @@
+ body{
+
+    font-family: "Tahoma", Arial, sans-serif;
+
+}
+
+
+main{
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    padding:0 20px;
+
+}
+
+
+/* profile header */
+
+
+.profile-header{
+
+    background:var(--white);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    margin-bottom:40px;
+
+}
+
+
+.profile-header img{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid var(--brand-purple);
+
+}
+
+
+.profile-info{
+
+    flex:1;
+
+}
+
+
+.profile-info h1{
+
+    color:var(--brand-purple);
+
+    font-size:2.4rem;
+
+    margin-bottom:8px;
+
+    font-family:"Trebuchet MS", sans-serif;
+
+}
+
+
+.member-id{
+
+    color:#666;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+
+.tagline{
+
+    color:var(--brand-accent-orange);
+
+    font-weight:600;
+
+}
+
+
+.edit-btn{
+
+    background:var(--brand-accent-orange);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.edit-btn:hover{
+
+    background:#d95338;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* section styles */
+
+
+.stats-section h2,
+
+.upcoming-trip h2,
+
+.account-info h2,
+
+.recent-bookings h2{
+
+    color:var(--brand-purple);
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+    font-family:"Trebuchet MS", sans-serif;
+
+}
+
+.booking-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.booking-card{
+    background:var(--white);
+    border-radius:20px;
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.booking-card:hover{
+    transform:translateY(-4px);
+}
+
+.booking-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.booking-icon{
+    font-size:2rem;
+}
+
+.booking-info{
+    flex:1;
+}
+
+.booking-info h3{
+    color:var(--brand-purple);
+    margin-bottom:5px;
+}
+
+.booking-info p{
+    color:#666;
+}
+
+.booking-status{
+    background:#67B68B;
+    color:white;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:.9rem;
+    font-weight:bold;
+}
+
+/* stats */
+
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+.stat-card{
+
+    background:var(--white);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.stat-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.stat-icon{
+
+    font-size:2.5rem;
+
+    margin-bottom:10px;
+
+}
+
+
+.stat-card h3{
+
+    font-size:2rem;
+
+    color:var(--brand-accent-orange);
+
+    margin-bottom:8px;
+
+}
+
+
+.stat-card p{
+
+    color:#555;
+
+    font-weight:600;
+
+}
+
+
+/* upcoming trip */
+
+
+.trip-card {
+    background: var(--white);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+    margin-bottom: 40px;
+}
+
+/* Targets the wrapper injected by your JavaScript */
+.trip-card-content {
+    display: flex;
+    flex-direction: row; /* Aligns image and text side-by-side */
+    width: 100%;
+}
+
+/* Targets the image injected by your JavaScript */
+.upcoming-image {
+    width: 40%; /* Image takes up exactly 40% of the card width */
+    object-fit: cover;
+    display: block;
+}
+
+/* Targets the details container injected by your JavaScript */
+.trip-details {
+    width: 60%; /* Text takes up the remaining 60% of the card width */
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trip-badge {
+    align-self: flex-start;
+    background: #67B68B;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.trip-details h3 {
+    color: var(--brand-purple);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.trip-details p {
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.view-booking-btn {
+    margin-top: 20px;
+    align-self: flex-start;
+    background: var(--brand-purple);
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.view-booking-btn:hover {
+    background: #2f1f58;
+    transform: translateY(-2px);
+}
+
+/* acc info */
+
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+.info-card{
+
+    background:var(--white);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+.info-icon{
+
+    font-size:2rem;
+
+}
+
+
+.info-card h4{
+
+    color:var(--brand-purple);
+
+    margin-bottom:5px;
+
+}
+
+
+.info-card p{
+
+    color:#555;
+
+}
+
+
+/* recent bookings */
+
+
+.booking-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+.booking-card{
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.booking-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+.booking-icon{
+
+    font-size:2rem;
+
+}
+
+
+.booking-info{
+
+    flex:1;
+
+}
+
+
+.booking-info h3{
+
+    color:var(--brand-purple);
+
+    margin-bottom:5px;
+
+}
+
+
+.booking-info p{
+
+    color:#666;
+
+}
+
+
+.booking-status{
+
+    background:#67B68B;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:.9rem;
+
+    font-weight:bold;
+
+}
+
+
+/* logout */
+
+
+.logout-section{
+
+    text-align:center;
+
+    margin:50px 0;
+
+}
+
+
+.logout-btn{
+
+    background:#d9534f;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 45px;
+
+    border-radius:14px;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.logout-btn:hover{
+
+    background:#b9413e;
+
+    transform:translateY(-2px);
+
+}
+
+
+.empty-bookings{
+
+    background: var(--white);
+
+    border-radius:20px;
+
+    padding:50px 30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+.empty-bookings img{
+
+    width:90px;
+
+    margin-bottom:20px;
+
+    opacity:.8;
+
+}
+
+
+.empty-bookings h3{
+
+    color:var(--brand-purple);
+
+    margin-bottom:12px;
+
+    font-size:1.8rem;
+
+}
+
+
+.empty-bookings p{
+
+    color:#666;
+
+    max-width:450px;
+
+    margin:0 auto 25px;
+
+    line-height:1.6;
+
+}
+
+
+.browse-btn{
+
+    display:inline-block;
+
+    background:var(--brand-accent-orange);
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.browse-btn:hover{
+
+    background:#d95338;
+
+}
+
+
+/* mobile design */
+
+
+@media(max-width:768px){
+
+    .profile-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .stats-grid,
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .trip-card{
+
+        flex-direction:column;
+
+    }
+
+
+    .trip-image{
+
+        min-width:100%;
+
+    }
+
+
+    .trip-details{
+
+        padding:25px;
+
+    }
+
+
+    .trip-details a{
+
+        text-decoration: none;
+
+    }
+
+
+    .booking-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .booking-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .profile-info h1{
+
+        font-size:2rem;
+
+    }
+
+    .stats-section h2,
+
+    .upcoming-trip h2,
+
+    .account-info h2,
+
+    .recent-bookings h2{
+
+        font-size:1.7rem;
+
+    }
+
+} 

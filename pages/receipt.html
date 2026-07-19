@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt | Beaches Travel inc.</title>
+    <link rel="stylesheet" href="../stylesheets/header-stylesheet.css">
+    <link rel="stylesheet" href="../stylesheets/global-stylesheet.css">
+    <link rel="stylesheet" href="../stylesheets/receipt-stylesheet.css">
+
+    <script src="../scripts/global-script.js" defer></script>
+    <script src="../scripts/receipt-script.js" defer></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h1>Booking Receipt</h1>
+        <div id="receipt-container">
+            <!-- inject the order details here using JS -->
+            <table id="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="receipt-body"></tbody>
+            </table>
+            
+            <div class="receipt-totals">
+                <p>Voucher Discount: <span id="receipt-discount"></span></p>
+                <p>Subtotal: <span id="receipt-subtotal"></span></p>
+                <p>VAT (12%): <span id="receipt-vat"></span></p>
+                <hr>
+                <h3>Total Paid: <span id="receipt-total"></span></h3>
+            </div>
+        </div>
+        
+        <a href="../index.html" id="returnHomeBtn">Return Home</a>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logo and Tagline -->
+            <div class="footer-section">
+                <img src="../images/icons/beaches-travel-inc-logo.svg" alt="Beaches Travel Logo" class="footer-logo">
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/offers.html">Offers</a></li>
+                    <li><a href="../pages/my-vouchers.html">Vouchers</a></li>
+                    <li><a href="../pages/about-us.html">About us</a></li>
+                </ul>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="../images/icons/facebook-icon.svg" alt="Facebook"></a>
+                    <a href="https://x.com"><img src="../images/icons/x-icon.svg" alt="X"></a>
+                    <a href="https://www.instagram.com"><img src="../images/icons/instagram-icon.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

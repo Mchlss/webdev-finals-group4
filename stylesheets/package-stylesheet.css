@@ -1,0 +1,186 @@
+.package-content {
+    padding: 30px;
+}
+
+.package-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid System */
+.details-grid {
+    display: grid;
+    grid-template-columns: minmax(400px, 1.3fr) minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-template-areas:
+        "image title title"
+        "image package tours"
+        "description pricing pricing"
+        "reviews reviews reviews";
+    gap: 20px;
+}
+
+/* Grid Areas */
+.package-image { grid-area: image; }
+.title-card { grid-area: title; }
+.package-card { grid-area: package; }
+.description-card { grid-area: description; }
+.pricing-card { grid-area: pricing; }
+.reviews-card { grid-area: reviews; }
+.tours-card {grid-area: tours;}
+
+/* Image Settings */
+.package-image {
+    align-self: stretch;
+}
+
+.package-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* General Card */
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: var(--brand-purple);
+    margin-bottom: 10px;
+}
+
+/* Beach Title */
+.title-container {
+    background: var(--brand-purple);
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.title-container h1 {
+    font-family: Georgia, serif;
+    color: var(--brand-accent-orange);
+    margin: 0;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: var(--brand-purple);
+    color: var(--white);
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Table Lists */
+.package-card ul,
+.tours-card ul {
+    padding-left: 18px;
+    margin-top: 8px;
+}
+
+.package-card li,
+.tours-card li {
+    margin-bottom: 6px;
+}
+
+.package-card li::marker,
+.tours-card li::marker {
+    color: var(--brand-accent-orange);
+}
+
+/* Reviews */
+.reviews-card {
+    border-left: 5px solid var(--brand-accent-pink);
+}
+
+/* Back Button */
+.back-link {
+    display: block;
+    width: fit-content;
+    margin: 20px 30px 20px auto;
+    padding: 10px 20px;
+    background: #ff7a5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: #ff5a3c;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .package-content {
+        padding: 15px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "package"
+            "tours"
+            "description"
+            "pricing"
+            "reviews";
+        gap: 15px;
+    }
+
+    .package-image {
+        height: auto;
+    }
+
+    .package-image img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .title-container {
+        display: block;
+        text-align: center;
+    }
+
+    .title-container h1 {
+        font-size: 20px;
+    }
+
+    .pricing-card table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+}

@@ -6,107 +6,112 @@
     <title>My Profile | Beaches Travel Inc.</title>
     <link rel="stylesheet" href="../stylesheets/header-stylesheet.css">
     <link rel="stylesheet" href="../stylesheets/global-stylesheet.css">
-    <link rel="stylesheet" href="../stylesheets/profile-stylesheet.css">
-    
-    <script src="../scripts/global-script.js"></script>
-</head>
+    <link rel="stylesheet" href="../stylesheets/my-profile-stylesheet.css">
 
+    <script src="../scripts/my-profile-script.js" defer></script>
+    <script src="../scripts/global-script.js" defer></script>
+</head>
 <body>
-    <header id="header-placeholder"></header>
+
+<header id="header-placeholder"></header>
 
     <main>
-
-        <!-- Profile Header -->
         <section class="profile-header">
-
-            <img src="../images/profile.png"
-                 alt="Profile Picture"
-                 width="150"
-                 height="150">
-
-            <h2>Juan Dela Cruz</h2>
-            <p><strong>Member ID:</strong> BT-2026-001</p>
-
+            <img src="../images/icons/profile-icon.svg" alt="Profile Picture">
+            <div class="profile-info">
+                <h1 id="display-name">Juan Dela Cruz</h1>
+                <p class="member-id">Member ID: BT-2026-001</p>
+                <p class="profile-bio" id="display-bio">🌴 Your Palawan Travel Buddy</p>
+            </div>
+            <a href="edit-profile.html" class="edit-btn">✏ Edit Profile</a>
         </section>
 
-        <!-- Account Information -->
-        <section class="account-info">
-
-            <h3>Account Information</h3>
-
-            <p><strong>Email:</strong> juandelacruz@gmail.com</p>
-            <p><strong>Phone Number:</strong> +63 912 345 6789</p>
-            <p><strong>Address:</strong> Quezon City, Philippines</p>
-
-            <a href="edit-profile.html">
-                <button>Edit Profile</button>
-            </a>
-
+        <section class="stats-section">
+            <h2>Travel Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🏖️</div>
+                    <h3 id="stat-trips-count">0</h3>
+                    <p>Trips Booked</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <h3 id="stat-reward-points">0</h3>
+                    <p>Reward Points</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <h3 id="stat-favorite">N/A</h3>
+                    <p>Favorite Destination</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Travel Statistics -->
-        <section class="travel-stats">
-
-            <h3>Travel Statistics</h3>
-
-            <p><strong>Total Trips Booked:</strong> 4</p>
-            <p><strong>Reward Points:</strong> 1250</p>
-            <p><strong>Favorite Destination:</strong> Nacpan Beach, El Nido</p>
-
-        </section>
-
-        <!-- Upcoming Trip -->
         <section class="upcoming-trip">
-
-            <h3>Upcoming Trip</h3>
-
-            <p><strong>Destination:</strong> Long Beach, San Vicente</p>
-            <p><strong>Date:</strong> July 25, 2026</p>
-            <p><strong>Package:</strong> 3 Days / 2 Nights</p>
-
+            <h2>Upcoming Trip</h2>
+            <div id="upcoming-trip-content" class="trip-card">
+                <p>No upcoming trips found.</p>
+            </div>
         </section>
 
-        <!-- Recent Bookings -->
+        <section class="account-info">
+            <h2>Account Information</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-icon">📧</span>
+                    <div><h4>Email</h4><p id="display-email">juandelacruz@gmail.com</p></div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📱</span>
+                    <div><h4>Phone Number</h4><p id="display-phone">+63 912 345 6789</p></div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <div><h4>Address</h4><p id="display-address">Quezon City, Philippines</p></div>
+                </div>
+            </div>
+        </section>
+
         <section class="recent-bookings">
-
-            <h3>Recent Bookings</h3>
-
-            <div class="booking-card">
-                <h4>Duli Beach, El Nido</h4>
-                <p>Date: March 12, 2026</p>
-                <p>Package: 2 Days / 1 Night</p>
+            <h2>Recent Bookings</h2>
+            <div id="recent-bookings-list" class="booking-list">
+                <!-- JS will inject content -->
             </div>
-
-            <hr>
-
-            <div class="booking-card">
-                <h4>White Beach, Port Barton</h4>
-                <p>Date: January 8, 2026</p>
-                <p>Package: Full Day Tour</p>
-            </div>
-
-            <hr>
-
-            <div class="booking-card">
-                <h4>Onoc Island, Balabac</h4>
-                <p>Date: November 20, 2025</p>
-                <p>Package: 3 Days / 2 Nights</p>
-            </div>
-
         </section>
-
-        <!-- Logout -->
-        <section class="logout-section">
-            <button>Logout</button>
-        </section>
-
     </main>
 
-    <footer class="custom-wave-footer">
+    <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved. Your Palawan Travel Buddy.</p>
+            <!-- Logo and Tagline -->
+            <div class="footer-section">
+                <img src="../images/icons/beaches-travel-inc-logo.svg" alt="Beaches Travel Logo" class="footer-logo">
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/offers.html">Offers</a></li>
+                    <li><a href="../pages/my-vouchers.html">Vouchers</a></li>
+                    <li><a href="../pages/about-us.html">About us</a></li>
+                </ul>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="../images/icons/facebook-icon.svg" alt="Facebook"></a>
+                    <a href="https://x.com"><img src="../images/icons/x-icon.svg" alt="X"></a>
+                    <a href="https://www.instagram.com"><img src="../images/icons/instagram-icon.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BEACHES TRAVEL Inc. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>

@@ -1,0 +1,83 @@
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+#receipt-container {
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px; /* Slightly rounded corners for a modern feel */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Receipt Typography */
+h1 {
+    text-align: center;
+    color: var(--brand-accent-orange);
+}
+
+/* Table styling for the items */
+#receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#receipt-table th {
+    border-bottom: 2px solid var(--brand-purple);
+    padding: 10px;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+#receipt-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Totals Area */
+.receipt-totals {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid var(--brand-purple);
+}
+
+.receipt-totals h3 {
+    color: var(--brand-accent-pink);
+    font-size: 1.5rem;
+}
+
+/* Button styling to match your brand */
+#returnHomeBtn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 12px 24px;
+    background-color: var(--brand-accent-orange);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#returnHomeBtn:hover {
+    background-color: var(--brand-purple); /* Changes to your brand purple */
+    transform: translateY(-2px); /* Lifts the button slightly */
+    cursor: pointer;
+}
+
+#header-placeholder {
+    width: 100%;
+    margin-bottom: 40px;
+}

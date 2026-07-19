@@ -1,0 +1,155 @@
+body{
+    font-family: "Tahoma", Arial, sans-serif;
+}
+
+.edit-profile-container{
+    max-width:1100px;
+    margin:50px auto;
+    padding:0 25px;
+}
+
+.edit-title{
+    margin-bottom:30px;
+}
+
+.edit-title h1{
+    font-size:2.4rem;
+    color: var(--brand-accent-orange);
+}
+
+.edit-title p{
+    color:#666;
+    margin-top:6px;
+}
+
+.edit-card{
+    background:#fff;
+    border-radius:22px;
+    padding:40px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.edit-form{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:45px;
+}
+
+.profile-upload{
+    text-align:center;
+}
+
+.profile-upload img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #f2efff;
+    margin-bottom:20px;
+}
+
+.upload-btn{
+    display:inline-block;
+    background:var(--brand-accent-orange);
+    color:#fff;
+    padding:12px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.form-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.full-width{
+    grid-column:1/3;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:700;
+    color:var(--brand-purple);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:14px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:var(--brand-purple);
+}
+
+.button-group{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:15px;
+}
+
+.save-btn,
+.cancel-btn{
+    padding:13px 28px;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.save-btn{
+    background: var(--brand-accent-orange);
+    color:#fff;
+}
+
+.save-btn:hover{
+    background: var(--brand-accent-orange);
+}
+
+.cancel-btn{
+    background:#e8e8e8;
+}
+
+.cancel-btn:hover{
+    background:#d7d7d7;
+}
+
+@media(max-width:900px){
+
+.edit-form{
+    grid-template-columns:1fr;
+}
+
+.form-section{
+    grid-template-columns:1fr;
+}
+
+.full-width{
+    grid-column:auto;
+}
+
+.button-group{
+    justify-content:center;
+}
+
+}
